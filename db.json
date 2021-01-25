@@ -1,0 +1,17 @@
+{
+    "bg":"https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
+    "title":"Quiz 1",
+    "description":"Placeholder text for quiz 1",
+    "question":[],
+    "external":[],
+    "theme":{
+        "colors":{
+            "primary": "#2196f3" ,
+            "secondary":"#f50057" ,
+            "mainBg": "#121212" ,
+            "contrastText": "#ffffff" ,
+            "wrong": "#ff5722",
+            "success": "#4caf50"
+        }
+    }
+}
