@@ -1,23 +1,13 @@
-import styled from 'styled-components'
-import db from '../db.json'
-import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-// function Title(props){
-//   return(
-//     <h1>
-//       {props.children}
-//     </h1>
-//   )
-// }
+import React from 'react';
+import styled from 'styled-components';
+import Head from 'next/head'
+import {useRouter} from 'next/router'
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -30,16 +20,15 @@ export const QuizContainer = styled.div`
   }
 `;
 
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `
-
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Quiz - Página Inicial</title>
+      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
@@ -48,6 +37,18 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Teste Submit')
+            }}>
+              <input placeholder="Digite seu nome" onBlur={(e)=>{
+                setName(e.target.value);
+              }}/>
+              <button type="submit" disabled={!name}>
+                Jogar - {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>
