@@ -32,12 +32,11 @@ export default function Home() {
             <form onSubmit={(e) => {
               e.preventDefault();
               router.push(`/quiz?name=${name}`);
-              console.log('Teste Submit')
             }}>
               <Input 
               placeholder="Digite seu nome"
               name="nomeUsuario" 
-              onBlur={(e)=>{
+              onChange={(e)=>{
                 setName(e.target.value);
               }}/>
               <Button type="submit" disabled={!name}>

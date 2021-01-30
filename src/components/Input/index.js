@@ -14,17 +14,17 @@ const InputBase = styled.input`
     margin-bottom: 25px;
 `;
 
-export default function Input( {onBlur, placeholder, ...props}) {
+export default function Input( {onChange, placeholder, ...props}) {
     return (
         <div>
-            <InputBase onBlur={onBlur} placeholder={placeholder} {...props}/>
+            <InputBase onChange={onChange} placeholder={placeholder} {...props}/>
         </div>
     )
 }
 
-Input.PropTypes = {
+Input.propTypes = {
     onChange: PropTypes.func.isRequired,
     placeholder: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.string,
 }
