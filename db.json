@@ -1,40 +1,43 @@
 {
-    "bg":"https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title":"Quiz 1",
-    "description":"Placeholder text for quiz 1",
-    "questions":[
-        {
-          "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-          "title": "Como fazer um seletor por id via CSS?",
-          "description": "Essa é pra aquecer",
-          "answer": 2,
-          "alternatives": [
-            ".elemento",
-            "*elemento",
-            "#elemento",
-            "%elemento"
-          ]
-        },
-        {
-          "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-          "title": "Como fazer um background gradiente com css?",
-          "description": "Faz tempo em haha",
-          "answer": 0,
-          "alternatives": [
-             "background: linear-gradient(#e66465, #9198e5);",
-             "background: gradient(#e66465, #9198e5);"
-          ]
-        }
-      ],
-    "external":[],
-    "theme":{
-        "colors":{
-            "primary": "#2196f3" ,
-            "secondary":"#f50057" ,
-            "mainBg": "#121212" ,
-            "contrastText": "#ffffff" ,
-            "wrong": "#ff5722",
-            "success": "#4caf50"
-        }
+  "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
+  "title": "Quiz 1",
+  "description": "Placeholder text for quiz 1",
+  "questions": [
+    {
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "title": "Como fazer um seletor por id via CSS?",
+      "description": "Essa é pra aquecer",
+      "answer": 2,
+      "alternatives": [
+        ".elemento",
+        "*elemento",
+        "#elemento",
+        "%elemento"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+      "title": "Como fazer um background gradiente com css?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+        "background: linear-gradient(#e66465, #9198e5);",
+        "background: gradient(#e66465, #9198e5);"
+      ]
     }
+  ],
+  "external": [
+    "https://aluraquiz-css.omariosouto.vercel.app/",
+    "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
+  ],
+  "theme": {
+    "colors": {
+      "primary": "#2196f3",
+      "secondary": "#f50057",
+      "mainBg": "#121212",
+      "contrastText": "#ffffff",
+      "wrong": "#ff5722",
+      "success": "#4caf50"
+    }
+  }
 }
